@@ -6,7 +6,7 @@
 import re
 import subprocess
 
-file = open("2019-01-23-active_IPs.csv", "r")
+file = open("2019-01-23-active_IPs.csv", "r") # Ask for file
 
 lines = []
 
