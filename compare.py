@@ -1,5 +1,8 @@
 #!/usr/local/bin/python3
 
+# ./compary.py >> comp
+# run multiple times for batches of 1000 entries
+
 import re
 import subprocess
 
