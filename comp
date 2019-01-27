@@ -1,56 +1,108 @@
-ME10 ME11
-CSS1 DUE-UAAP-P1
-DON1 DUE-REG-P3
-CRCPRINT CHI-SANG
-FOOTNOTE HEADING
-ATOPRINTER ATOPRINTER2
-TAHA MEF2
-MECHPRNT100 MEC5
-ADD5 DUE-ADM-ADD5
-WEED DUE-ADM-WEED
-SSC4 DUE-SFS-SSC4
-SSC3 DUE-SFS-BUR4
-P192 SMG
-B7-303 B09-235A
-MEC9 NANO9
-M09-554 M07-301
+16 conflicts out of 54 matches                               
 
 
-CHP1 CHP1
-CHP2 CHP2
-FDRLCOLOR FDRLCOLOR
-AAFO AAFO
-BRIT BRIT
-PRINTER-5331 PRINTER-5331
-BJE BJE
-CSG1 CSG1
-LIBCOPY04 LIBCOPY04
-DCM16-868-1 DCM16-868-1
-KLI KLI
-NIKI NIKI
-COPIER56-787 COPIER56-787
-MRL-PRINTER MRL-PRINTER
-HQP-COLOR HQP-COLOR
-IRIS IRIS
-SCHLAU-COHEN-PRINTER SCHLAU-COHEN-PRINTER
-CASE CASE
-CUKE CUKE
-SPBELL-PRINTER SPBELL-PRINTER
-GEM1 GEM1
-CHUK CHUK
-PIGMENT PIGMENT
-LHQS LHQS
-LITTLETONCOLOR LITTLETONCOLOR
-XU5 XU5
-LITTLETON-LABPRINT1 LITTLETON-LABPRINT1
-AHQ1 AHQ1
-CST CST
-P07-433 P07-433
-PP41 PP41
-PHY2 PHY2
-CADMIUM CADMIUM
-SMAP SMAP
-BARK BARK
-CAO8 CAO8
-PAY4 PAY4
-EMCC-PRINTER EMCC-PRINTER
+0014386585d9, network 5:
+      Moira DHCP will offer 18.38.2.205 (ME10.mit.edu)
+Netregadmin DHCP will offer 18.38.0.118 (ME11.mit.edu)
+
+0021b704633b, network 5:
+      Moira DHCP will offer 18.38.1.223 (CSS1.mit.edu)
+Netregadmin DHCP will offer 18.38.0.245 (DUE-UAAP-P1.mit.edu)
+
+3c4a9245a960, network 5:
+      Moira DHCP will offer 18.38.1.240 (DON1.mit.edu)
+Netregadmin DHCP will offer 18.38.1.47 (DUE-REG-P3.mit.edu)
+
+001a4b1bfee5, network E25:
+      Moira DHCP will offer 18.114.0.53 (CRCPRINT.mit.edu)
+Netregadmin DHCP will offer 18.42.1.159 (CHI-SANG.mit.edu)
+
+001185d86d23, network EE19:
+      Moira DHCP will offer 18.76.0.136 (FOOTNOTE.mit.edu)
+Netregadmin DHCP will offer 18.76.0.153 (HEADING.mit.edu)
+
+001ba9ce33d0, network 35:
+      Moira DHCP will offer 18.78.3.98 (ATOPRINTER.mit.edu)
+Netregadmin DHCP will offer 18.78.0.147 (ATOPRINTER2.mit.edu)
+
+1cc1de8306fd, network 3:
+      Moira DHCP will offer 18.58.1.46 (TAHA.mit.edu)
+Netregadmin DHCP will offer 18.80.1.212 (MEF2.mit.edu)
+
+0014386512e4, network 3:
+      Moira DHCP will offer 18.80.0.172 (MECHPRNT100.mit.edu)
+Netregadmin DHCP will offer 18.80.1.230 (MEC5.mit.edu)
+
+000400312892, network 3:
+      Moira DHCP will offer 18.80.1.227 (ADD5.mit.edu)
+Netregadmin DHCP will offer 18.80.3.167 (DUE-ADM-ADD5.mit.edu)
+
+1cc1de81b059, network 3:
+      Moira DHCP will offer 18.80.3.55 (WEED.mit.edu)
+Netregadmin DHCP will offer 18.80.3.168 (DUE-ADM-WEED.mit.edu)
+
+f4ce463bda15, network 11:
+      Moira DHCP will offer 18.81.1.41 (SSC4.mit.edu)
+Netregadmin DHCP will offer 18.81.0.167 (DUE-SFS-SSC4.mit.edu)
+
+00215a9882a3, network 11:
+      Moira DHCP will offer 18.81.1.7 (SSC3.mit.edu)
+Netregadmin DHCP will offer 18.81.0.172 (DUE-SFS-BUR4.mit.edu)
+
+0004002587e4, network 11:
+      Moira DHCP will offer 18.81.0.215 (P192.mit.edu)
+Netregadmin DHCP will offer 18.81.0.66 (SMG.mit.edu)
+
+0000aaaeb717, network 9:
+      Moira DHCP will offer 18.113.0.227 (B7-303.mit.edu)
+Netregadmin DHCP will offer 18.89.0.37 (B09-235A.mit.edu)
+
+000400e91a76, network 7:
+      Moira DHCP will offer 18.80.3.138 (MEC9.mit.edu)
+Netregadmin DHCP will offer 18.113.1.108 (NANO9.mit.edu)
+
+00206b9f54b3, network 7:
+      Moira DHCP will offer 18.89.0.49 (M09-554.mit.edu)
+Netregadmin DHCP will offer 18.113.2.30 (M07-301.mit.edu)
+
+
+The following hosts have MAC entries in Moira that agree with the ones in Netregadmin:
+18.11.0.31 (CHP1.mit.edu)
+18.11.0.32 (CHP2.mit.edu)
+18.33.0.80 (FDRLCOLOR.mit.edu)
+18.34.1.173 (AAFO.mit.edu)
+18.34.1.18 (BRIT.mit.edu)
+18.38.2.176 (PRINTER-5331.mit.edu)
+18.42.1.40 (BJE.mit.edu)
+18.50.2.113 (CSG1.mit.edu)
+18.51.3.82 (LIBCOPY04.mit.edu)
+18.55.3.18 (DCM16-868-1.mit.edu)
+18.56.0.235 (KLI.mit.edu)
+18.56.1.46 (NIKI.mit.edu)
+18.56.1.78 (COPIER56-787.mit.edu)
+18.58.2.12 (MRL-PRINTER.mit.edu)
+18.58.3.108 (HQP-COLOR.mit.edu)
+18.58.3.20 (IRIS.mit.edu)
+18.74.0.78 (SCHLAU-COHEN-PRINTER.mit.edu)
+18.76.0.42 (CASE.mit.edu)
+18.76.0.59 (CUKE.mit.edu)
+18.79.4.253 (SPBELL-PRINTER.mit.edu)
+18.80.2.35 (GEM1.mit.edu)
+18.80.2.51 (CHUK.mit.edu)
+18.83.2.117 (PIGMENT.mit.edu)
+18.90.1.37 (LHQS.mit.edu)
+18.93.0.171 (LITTLETONCOLOR.mit.edu)
+18.93.0.55 (XU5.mit.edu)
+18.93.2.38 (LITTLETON-LABPRINT1.mit.edu)
+18.113.1.3 (AHQ1.mit.edu)
+18.113.2.229 (CST.mit.edu)
+18.113.2.31 (P07-433.mit.edu)
+18.114.1.183 (PP41.mit.edu)
+18.115.0.57 (PHY2.mit.edu)
+18.115.1.107 (CADMIUM.mit.edu)
+18.115.1.7 (SMAP.mit.edu)
+18.124.1.30 (BARK.mit.edu)
+18.124.1.36 (CAO8.mit.edu)
+18.124.3.63 (PAY4.mit.edu)
+18.127.1.102 (EMCC-PRINTER.mit.edu)
+

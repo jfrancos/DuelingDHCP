@@ -1,30 +1,56 @@
 #!/usr/local/bin/python3
 
-# ./compary.py >> comp
-# run multiple times for batches of 1000 entries
-
+import pexpect
 import re
-import subprocess
+import sys
 
-file = open("2019-01-23-active_IPs.csv", "r") # Ask for file
+prompt = 'moira:  '
+file = open("../2019-01-23-active_IPs.csv", "r") # Ask for file
 
-lines = []
-
+MACtable = []
 for line in file:
 	if re.search('[0-9a-f]{12}', line):
 		lineArray = line.split(',')
-		lines += [[lineArray[2],lineArray[3]]]
+		MACtable += [lineArray[1:5]]
 
-command = "\""
+moira = pexpect.spawnu('ssh athena mrtest')
+moira.expect(prompt)
+moira.sendline("connect")
+moira.expect(prompt)
+moira.sendline("auth")
+moira.expect(prompt)
 
-for line in lines[1000:2000]: # in batches of 1000 otherwise it gets too long for bash or ssh
-	command += "$(qy get_host_by_identifier HWADDR " + line[1] + " |head -n1 |sed  's/name: *//g' |sed 's/.MIT.EDU//')," + line[0] + "|"
+matches = 0
+conflicts = 0
 
-result = subprocess.check_output(["ssh", "athena", "printf", command + "\""]).decode();
+for i, line in enumerate(MACtable):
+	print(f"\r{line[2]} {i}/{len(MACtable)}: {conflicts} conflicts out of {matches} matches", file=sys.stderr, end='', flush=True)
+	moira.sendline("qy ghid HWADDR " + line[2] )
+	moira.expect(prompt)
+	search = re.search('([\w-]+).MIT.EDU', moira.before)
+	if search:
+		matches += 1
+		line += [search[0], search[1]]
+		if line[1] != line[5]:
+			conflicts += 1
+			moira.sendline("qy ghus " + line[4])
+			moira.expect(prompt)
+			search = re.search('HOSTADDRESS, ([\d.]*)', moira.before)
+			line[4] = search[1]
 
-result = result.split("|")
+conflict_text = "\n"
+agreement_text = "\nThe following hosts have MAC entries in Moira that agree with the ones in Netregadmin:\n"
 
-for line in result:
-	splitLine = line.split(',')
-	if splitLine[0]:
-		print (splitLine[0], splitLine[1])
+MACtable = [line for line in MACtable if len(line) > 4]
+for entry in MACtable:
+	if entry[1] != entry[5]:
+		conflict_text += f"\n{entry[2]}, network {entry[3]}:\n"
+		conflict_text += f"      Moira DHCP will offer {entry[4]} ({entry[5]}.mit.edu)\n"
+		conflict_text += f"Netregadmin DHCP will offer {entry[0]} ({entry[1]}.mit.edu)\n"
+	else:
+		agreement_text += f"{entry[0]} ({entry[1]}.mit.edu)\n"
+
+print("", file=sys.stderr)
+print(f"\r{conflicts} conflicts out of {matches} matches                               ")
+print(conflict_text)
+print(agreement_text)
